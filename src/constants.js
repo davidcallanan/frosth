@@ -1,0 +1,1 @@
+export const MARK_INSTALLABLE = Symbol("MARK:INSTALLABLE");

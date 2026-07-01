@@ -1,0 +1,29 @@
+{
+	"name": "@davidcal/frosth",
+	"version": "1.0.0",
+	"description": "Async-first CRUD-last UI framework that treats encapsulation as a solved problem.",
+	"type": "module",
+	"main": "./src/sigew.js",
+	"exports": {
+		".": "./src/sigew.js",
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"src"
+	],
+	"keywords": [
+		"ui",
+		"framework",
+		"signals",
+		"async"
+	],
+	"author": "David P. Callanan",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/davidcallanan/frosth"
+	},
+	"dependencies": {
+		"unsuspended-promise": "^1.0.1"
+	}
+}
