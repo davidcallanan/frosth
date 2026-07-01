@@ -8,7 +8,7 @@ When building production-grade tools that prioritize reliability and UX over aes
 That's why I built Frosth. It's not meant for all apps yet. It only supports client-side rendering. It's best suited for internal tools or dashboards where interaction desync is a big no-no.
 - Async first: Not in a hacked way by slapping Suspense all over the codebase. Initialization is gradual at the state-management level, not bolted onto the UI later.
 - Developers are treated with respect: The process of good software architecture is a solved problem - coming from experience and wisdom. A component framework that forces the "right" architecture is like telling junior developers that they will never be trusted to learn by failing.
-- CRUD second: 
+- CRUD-last: Encapsulation is a solved problem. Sometimes code should be kept CRUD-like, sometimes behaviour and state should be encapsulated. An experienced developer is already trained to organize code effectively. Component frameworks don't need something new. Imagine a codebase where for every argument in the constructor, you must attach a getter and setter. You would be shocked! But this is effectively what React enforces for every component, the props are required to be changeable as the lifetime of the component progresses. Solid.js makes it easier to have read-only props, but is still inherently CRUD-based, not behaviour-based.
 
 ## Setup
 
