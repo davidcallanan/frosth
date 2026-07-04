@@ -21,6 +21,10 @@ class Self {
 		}
 	}
 	
+	_create_child(run_effect, options) {
+		return create_self(this, run_effect, options);
+	}
+	
 	create_effect(callback) {
 		let child;
 		

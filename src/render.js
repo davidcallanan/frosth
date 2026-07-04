@@ -20,11 +20,13 @@ const render_diff = (s, prev, next, target) => {
 			return prev_map.get(item);
 		}
 
-		const item_self = create_self(s);
+		const item_self = s._create_child();
 		const fragment = create_fragment(target);
 		const new_state = { prev: [] };
 		
-		render(item_self, fragment, item(item_self), new_state);
+		item_self.create_effect((s) => {
+			render(s._create_child(), fragment, item(s), new_state);
+		});
 		
 		return { item, item_self, fragment, state: new_state };
 	});
