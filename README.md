@@ -1,5 +1,7 @@
 # Frosth - Yet another UI framework
 
+**Latest version**: v1.0.1
+
 ## Motivation
 
 Frontend component frameworks are still a mess (controversial, I know).
@@ -260,4 +262,16 @@ const App = obtain(async ({ t, s }) => {
 		}),
 	]);
 });
+```
+
+Ensure to wrap children in an array if making it reactive, or alternatively pass in a component instance that is inherently reactive.
+
+```
+const my_text_constant = create_signal(() => "my text content");
+
+installed.set(() => [
+	(s) => s.$h1({}, [
+		(s) => my_text_content(s),
+	]),
+])
 ```

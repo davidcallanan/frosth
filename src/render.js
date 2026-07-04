@@ -33,7 +33,13 @@ const render_diff = (s, prev, next, target) => {
 };
 
 export const render = async (s, target, installed, state) => {
-	console.log("rendering", installed);
+	console.log("rendering", installed, typeof installed);
+	
+	if (typeof installed === "string") {
+		target.textContent = installed;
+		
+		return;
+	}
 	
 	if (Array.isArray(installed)) {
 		if (state.prev.length === 0) {

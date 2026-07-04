@@ -33,7 +33,22 @@ class Fragment {
 
 	set innerText(text) {
 		this.clear();
-		this.appendChild(document.createTextNode(text));
+		
+		if (text === null || text === undefined) {
+			return;
+		}
+		
+		this.appendChild(document.createTextNode(String(text)));
+	}
+	
+	set textContent(text) {
+		this.clear();
+		
+		if (text === null || text === undefined) {
+			return;
+		}
+
+		this.appendChild(document.createTextNode(String(text)));
 	}
 }
 

@@ -31,12 +31,6 @@ export const h = (s, tag, props, children) => {
 			});
 		}
 	}
-	
-	if (typeof children === "string") {
-		el.textContent = children;
-		
-		return el;
-	}
 
 	if (children !== undefined) {
 		const fragment = create_fragment(el);
