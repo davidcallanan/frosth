@@ -27,7 +27,14 @@ export const h = (s, tag, props, children) => {
 			});
 		} else {
 			s.create_effect((s) => {
-				el.setAttribute(key, props[key](s));
+				const prop$ = props[key](s);
+				
+				if (prop$ === undefined) {
+					el.removeAttribute(key);					
+					return;
+				}
+				
+				el.setAttribute(key, prop$);
 			});
 		}
 	}

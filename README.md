@@ -1,6 +1,6 @@
 # Frosth - Yet another UI framework
 
-**Latest version**: v1.0.2
+**Latest version**: v1.0.3
 
 ## Motivation
 

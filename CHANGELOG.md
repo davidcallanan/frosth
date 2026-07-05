@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.3
+
+- Fix: Setting attribute to `undefined` was using the string "undefined" instead of removing the attribute.
+
 ## v1.0.2
 
 - Fix: Individual entries inside render arrays were not reactive.
