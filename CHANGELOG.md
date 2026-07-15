@@ -1,10 +1,14 @@
 # Changelog
 
+## v1.2.0
+
+- Add: Added `ref: ["on_mount", signal.set]` strategy. Under this strategy, the provided callback is only invoked once the DOM element `isConnected` ([#2](https://github.com/davidcallanan/frosth/issues/2)).
+
 ## v1.1.0
 
 - Add: Added `create_memo`, a read-only wrapper around `create_signal`.
 - Change: Ref syntax now requires explicit strategy; use `ref: ["on_create", signal.set]` instead of `ref: () => signal.set`. Old syntax deprecated.
-- Known issue: `create_memo` and `create_signal` computations are not memoized (#1).
+- Known issue: `create_memo` and `create_signal` computations are not memoized ([#1](https://github.com/davidcallanan/frosth/issues/1)).
 
 ## v1.0.3
 

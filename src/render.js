@@ -100,6 +100,7 @@ export const render = async (s, target, installed, state) => {
 	}
 	
 	target.innerHTML = "";
+	
 	const fragment = create_fragment(target);
 	
 	const new_state = { prev: [] };

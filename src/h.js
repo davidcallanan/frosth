@@ -1,4 +1,5 @@
 import { create_fragment } from "./create_fragment.js";
+import { outstanding_mount_checks } from "./mount_checks.js";
 import { render } from "./render.js";
 
 export const h = (s, tag, props, children) => {
@@ -38,7 +39,7 @@ export const h = (s, tag, props, children) => {
 				if (when === "on_create") {
 					ref_set(() => el);
 				} else if (when === "on_mount") {
-					throw new Error("[Frosth] Ref \"on_mount\" strategy not yet implemented.");
+					outstanding_mount_checks.set(el, () => ref_set(() => el));
 				} else {
 					throw new Error(`[Frosth] Invalid ref strategy "${when}"`);
 				}
