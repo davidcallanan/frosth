@@ -5,10 +5,12 @@ import { create_signal } from "./create_signal.js";
 import { h } from "./h.js";
 import { render } from "./render.js";
 import { MARK_INSTALLABLE } from "./constants.js";
+import { create_memo } from "./create_memo.js";
 
 export { create_self };
 export { create_signal };
 export { h };
+export { create_memo };
 
 export const installarea = (s) => {
 	const storage = s.create_housed_signal(() => undefined);

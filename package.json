@@ -1,6 +1,6 @@
 {
 	"name": "@davidcal/frosth",
-	"version": "1.0.3",
+	"version": "1.1.0",
 	"description": "Async-first CRUD-last UI framework that treats encapsulation as a solved problem.",
 	"type": "module",
 	"main": "./src/sigew.js",
@@ -19,6 +19,7 @@
 	],
 	"author": "David P. Callanan",
 	"license": "MIT",
+	"homepage": "https://frosth.condensis.com",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/davidcallanan/frosth"

@@ -21,10 +21,28 @@ export const h = (s, tag, props, children) => {
 				prev = handler;
 			});
 		} else if (key === "ref") {
-			s.create_effect(() => {
-				const ref_fn = props[key](s);
-				ref_fn(() => el);
-			});
+			if (typeof props[key] === "function") {
+				console.warn("[Frosth] Deprecated: Instead of `ref: () => signal.set`, use `ref: [\"on_create\", signal.set]`");
+					
+				s.create_effect(() => {
+					const ref_set = props[key](s);
+					ref_set(() => el);
+				});
+			} else {
+				if (!Array.isArray(props[key])) {
+					throw new Error("[Frosth] Ref must be an array, either `[\"on_create\", signal.set]` or `[\"on_mount\", signal.set]`");
+				}
+				
+				const [when, ref_set] = props[key];
+				
+				if (when === "on_create") {
+					ref_set(() => el);
+				} else if (when === "on_mount") {
+					throw new Error("[Frosth] Ref \"on_mount\" strategy not yet implemented.");
+				} else {
+					throw new Error(`[Frosth] Invalid ref strategy "${when}"`);
+				}
+			}
 		} else {
 			s.create_effect((s) => {
 				const prop$ = props[key](s);

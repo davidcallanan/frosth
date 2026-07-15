@@ -13,6 +13,7 @@ export const create_signal_raw = (initial) => {
 
 	const set = (new_value) => {
 		value = new_value;
+
 		for (const effect of subscribers) {
 			effect();
 		}

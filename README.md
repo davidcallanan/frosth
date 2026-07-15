@@ -1,6 +1,6 @@
 # Frosth - Yet another UI framework
 
-**Latest version**: v1.0.3
+**Latest version**: v1.1.0
 
 ## Motivation
 
@@ -200,7 +200,7 @@ const Component = obtain(async ({ t, s }) => {
 	
 	installed.set(() => [
 		(s) => s.$h1({
-			ref: () => ref_text.set,
+			ref: ["on_create", ref_text.set],
 		}, "Click the button to change my color"),
 		(s) => s.$button({
 			onclick: () => () => {
