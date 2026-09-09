@@ -6,11 +6,13 @@ import { h } from "./h.js";
 import { render } from "./render.js";
 import { MARK_INSTALLABLE } from "./constants.js";
 import { create_memo } from "./create_memo.js";
+import { create_beacon } from "./create_beacon.js";
 
 export { create_self };
 export { create_signal };
 export { h };
 export { create_memo };
+export { create_beacon };
 
 export const installarea = (s) => {
 	const storage = s.create_housed_signal(() => undefined);

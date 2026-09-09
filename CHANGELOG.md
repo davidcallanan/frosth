@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.3.0
+
+- Add: New `create_beacon` primitive, an alternative to `create_signal` for stable valueless sinks.
+- Fix: Signals notified subscribers even when the value did not change.
+
 ## v1.2.0
 
 - Add: Added `ref: ["on_mount", signal.set]` strategy. Under this strategy, the provided callback is only invoked once the DOM element `isConnected` ([#2](https://github.com/davidcallanan/frosth/issues/2)).
