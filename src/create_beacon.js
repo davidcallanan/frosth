@@ -1,3 +1,5 @@
+import { create_signal } from "./create_signal.js";
+
 /**
  * A beacon is a valueless-sink. The output is a stable interface as provided on creation. Subscribers are notified whenever the beacon is fired.
  */

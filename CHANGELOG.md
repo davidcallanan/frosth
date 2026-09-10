@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.4.0
+
+- Add: New reactive `create_stream` primitive for emitting and draining payloads.
+- Fix: `create_beacon` did not work.
+
 ## v1.3.0
 
 - Add: New `create_beacon` primitive, an alternative to `create_signal` for stable valueless sinks.
