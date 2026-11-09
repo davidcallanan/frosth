@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.5.0
+
+- Add: Added `emit_many` method to streams.
+- Fix: Cleanup handlers in `create_self` were not executed in reverse order.
+
 ## v1.4.0
 
 - Add: New reactive `create_stream` primitive for emitting and draining payloads.

@@ -33,5 +33,18 @@ export const create_stream = () => {
 		beacon.fire();
 	};
 	
+	result.emit_many = (bodies) => {
+		for (const body of bodies) {
+			const activity = {
+				seq: activity_seq++,
+				body,
+			};
+			
+			outstanding_activities.push(activity);
+		}
+		
+		beacon.fire();
+	};
+	
 	return result;
 };

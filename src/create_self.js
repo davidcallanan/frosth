@@ -106,7 +106,7 @@ class Self {
 			this._parent._children.delete(this);
 		}
 		
-		for (const handle_dispose of this._dispose_handlers) {
+		for (const handle_dispose of this._dispose_handlers.toReversed()) {
 			handle_dispose();
 		}
 	}
