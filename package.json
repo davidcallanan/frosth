@@ -1,6 +1,6 @@
 {
 	"name": "@davidcal/frosth",
-	"version": "1.6.1",
+	"version": "1.7.0",
 	"description": "Async-first CRUD-last UI framework that treats encapsulation as a solved problem.",
 	"type": "module",
 	"main": "./src/sigew.js",
@@ -25,6 +25,7 @@
 		"url": "https://github.com/davidcallanan/frosth"
 	},
 	"dependencies": {
+		"immutable": "^5.1.10",
 		"unsuspended-promise": "^1.0.1"
 	}
 }

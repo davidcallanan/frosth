@@ -13,6 +13,7 @@ import { stream_filter } from "./stream_filter.js";
 import { stream_map } from "./stream_map.js";
 import { stream_reduce } from "./stream_reduce.js";
 import { stream_latest } from "./stream_latest.js";
+import { create_array } from "./create_array.js";
 
 export { create_self };
 export { create_signal };
@@ -25,6 +26,7 @@ export { stream_filter };
 export { stream_map };
 export { stream_reduce };
 export { stream_latest };
+export { create_array };
 
 export const installarea = (s) => {
 	const storage = s.create_housed_signal(() => undefined);

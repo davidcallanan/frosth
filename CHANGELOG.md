@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.7.0
+
+- Add: Added new stream-based array-like primitive `create_array`.
+
 ## v1.6.1
 
 - Fix: Newly added features from v1.6.0 were not exported.
