@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.6.1
+
+- Fix: Newly added features from v1.6.0 were not exported.
+
 ## v1.6.0
 
 - Add: Added stream primitives such as `create_producer`, `stream_map`, `stream_filter`, `stream_reduce`, and finally `stream_latest` to bounce from the stream world to the reactivity world.

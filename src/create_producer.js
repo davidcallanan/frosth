@@ -19,14 +19,14 @@ export const create_producer = () => {
 		return result;
 	};
 	
-	result.emit = (calldata) => {
-		return result.emit_many([calldata]);
+	result.emit = (message) => {
+		return result.emit_many([message]);
 	};
 	
-	result.emit_many = (calldatas) => {
-		for (const calldata of calldatas) {
+	result.emit_many = (messages) => {
+		for (const message of messages) {
 			for (const handler of subscriptions) {
-				handler(calldata);
+				handler(message);
 			}
 		}
 	};

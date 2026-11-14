@@ -8,6 +8,11 @@ import { MARK_INSTALLABLE } from "./constants.js";
 import { create_memo } from "./create_memo.js";
 import { create_beacon } from "./create_beacon.js";
 import { create_stream } from "./create_stream.js";
+import { create_producer } from "./create_producer.js";
+import { stream_filter } from "./stream_filter.js";
+import { stream_map } from "./stream_map.js";
+import { stream_reduce } from "./stream_reduce.js";
+import { stream_latest } from "./stream_latest.js";
 
 export { create_self };
 export { create_signal };
@@ -15,6 +20,11 @@ export { h };
 export { create_memo };
 export { create_beacon };
 export { create_stream };
+export { create_producer };
+export { stream_filter };
+export { stream_map };
+export { stream_reduce };
+export { stream_latest };
 
 export const installarea = (s) => {
 	const storage = s.create_housed_signal(() => undefined);

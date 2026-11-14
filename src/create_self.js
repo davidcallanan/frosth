@@ -25,6 +25,10 @@ class Self {
 		return create_self(this, run_effect, options);
 	}
 	
+	_is_effectfully_useful() {
+		return this._run_effect !== undefined;
+	}
+	
 	create_effect(callback) {
 		let child;
 		
