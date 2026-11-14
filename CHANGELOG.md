@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.7.1
+
+- Fix: Arrays did not provide snapshot to late subscribers.
+
 ## v1.7.0
 
 - Add: Added new stream-based array-like primitive `create_array`.

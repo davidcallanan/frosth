@@ -6,8 +6,27 @@ const wrap = (initial_uly_list) => {
 
 	const producer = create_producer();
 
+	const stream = {
+		subscribe: (handler) => {
+			let replay_list = Immutable.List();
+			let prev_contract = wrap(replay_list);
+			
+			uly_list.forEach((value, index) => {
+				const next_list = replay_list.insert(index, value);
+				const next_contract = wrap(next_list);
+				
+				handler([{ method: "insert", args: [index, value] }, next_contract, prev_contract]);
+				
+				replay_list = next_list;
+				prev_contract = next_contract;
+			});
+			
+			return producer.stream.subscribe(handler);
+		},
+	};
+
 	const contract = {
-		stream: producer.stream,
+		stream,
 		size: () => uly_list.size,
 		get: (index) => uly_list.get(index),
 		first: () => uly_list.first(),
